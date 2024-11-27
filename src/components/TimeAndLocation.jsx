@@ -1,13 +1,16 @@
+import React from "react";
 
-const TimeAndLocation = () => {
+const TimeAndLocation = ({ weather: { formattedLocalTime, name, country }}) => {
   return (
     <div className=''>
         <div className="flex items-center justify-center my-6">
-            <p> Wednesday, 27 April 2024 | Local time: 08:59 PM</p>
+            <p className="text-xl font-extralight">
+              {formattedLocalTime}
+            </p>
         </div>
 
         <div className="flex items-center justify-center my-3">
-            <p className="text-3xl font-medium">Ho Chi Minh, Viet Nam</p>
+            <p className="text-3xl font-medium">{`${name}, ${country}`}</p>
 
         </div>
     </div>
