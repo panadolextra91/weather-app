@@ -49,22 +49,22 @@ const App = () => {
       if (isNight) {
         switch (weather.details) {
           case 'Clear':
-            return "bg-[url('https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif')] bg-cover bg-center";
+            return "bg-gradient-to-br from-purple-950 to-black";
           case 'Clouds':
-            return "bg-[url('https://media.tenor.com/Hgv66cmtGDgAAAAM/clouds-night.gif')] bg-cover bg-center";
+            return "bg-gradient-to-br from-[#038aa8] to-black";
           case 'Rain':
-            return "bg-[url('https://media.tenor.com/images/29802d23654b845969a62105b6d5b14e/tenor.gif')] bg-cover bg-center";
+            return "bg-gradient-to-b from-black via-slate-700 to-slate-400";
           default:
             return 'from-yellow-600 to-orange-600'; // Fallback gradient for night
         }
       } else {
         switch (weather.details) {
           case 'Clear':
-            return "bg-[url('https://www.icegif.com/wp-content/uploads/2022/08/icegif-963.gif')] bg-cover bg-center";
+            return "bg-gradient-to-bl from-yellow-300 to-blue-500 via-blue-400";
           case 'Clouds':
-            return "bg-[url('https://media.tenor.com/tM1VMb-dA44AAAAM/mood-aesthetic.gif')] bg-cover bg-center";
+            return "bg-gradient-to-b from-teal-700 via-teal-200 to-yellow-200";
           case 'Rain':
-            return "bg-[url('https://theapopkavoice.com/uploads/original/20230712-183836-header_raining.gif')] bg-cover bg-center";
+            return "bg-gradient-to-b from-blue-950 to-slate-600";
           default:
             return 'from-cyan-600 to-blue-600'; // Fallback gradient for day
         }
